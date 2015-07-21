@@ -1,0 +1,141 @@
+$primaryColour: #A80000;
+$padding: 10px;
+$transparentWhite: rgba(256,256,256, 0.8);
+$boxShadow: #333 0px 0px 5px;
+$radius: 5px;
+
+html { height: 100% }
+body { height: 100%; margin: 0; padding: 0 }
+
+.map-container {
+  height: 100%;
+  width: 100%;
+}
+
+#map {
+  width: 100%;
+  height: 100%;
+}
+
+header {
+  padding: $padding;
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 1;
+}
+
+h2, h5 {
+  color: $primaryColour;
+}
+
+.location-form {
+  overflow: hidden;
+  box-shadow: $boxShadow;
+}
+
+.location-form input[type="text"] {
+  border: 3px solid $primaryColour;
+  padding: 5px;
+  min-width: 360px;
+}
+
+.location-form input[type="submit"] {
+  background: $primaryColour;
+  color: #fff;
+  margin: -4px;
+  border: 0;
+  padding: 8px;
+}
+
+.results {
+  background: $transparentWhite;
+  border-left: 1px solid #888;
+  box-shadow: #aaa -1px 0 3px;
+  max-width: 240px;
+  position: fixed;
+  right: 0px;
+  top: 0px;
+  height: 100%;
+  overflow-y: scroll;
+}
+
+.msg-to-user {
+  background: #fff;
+  border-bottom: 2px solid #ddd;
+  box-shadow: #333 0 1px 3px;
+  padding: 10px;
+  margin: 0;
+}
+
+.results .address {
+  font-size: 0.85em;
+  margin: 0 0 10px;
+}
+
+.nearby-list {
+  padding: 0;
+  list-style: none;
+}
+
+.nearby-list li {
+  padding: $padding;
+  border-bottom: 1px solid #ddd;
+}
+
+.nearby-list li.active {
+  font-size: 1.25em;
+  background-color: $primaryColour;
+  background-image: url(../images/pizzaPattern.png); // photo credit: http://www.colourlovers.com/pattern/780193/Pizza_Connection
+  background-size: cover;
+  color: #fff;
+  text-shadow: #000 1px 1px 3px;
+  border-top: 1px solid #777;
+  border-bottom: 1px solid #777;
+}
+
+.nearby-list li.active button {
+  color: $primaryColour;
+}
+
+.nearby-list li.active h5 {
+  color: #fff;
+  font-size: 1.25em;
+}
+
+.nearby-list li:last-child {
+  border-bottom: 0;
+}
+
+.nearby-list li:hover {
+  cursor: pointer;
+
+}
+
+/* removes scroll bar from infowindows */
+.place-wrapper {
+  padding: $padding;
+  line-height:1.35;
+  overflow:hidden;
+  white-space:nowrap;
+}
+
+.photos-container {
+  position: fixed;
+  bottom: 0;
+  z-index: 100;
+  background: #fff;
+  max-width: 60%;
+  box-shadow: $boxShadow;
+}
+
+.slick-slider { margin: 0 !important; }
+.slick-next { right: 10px !important; }
+.slick-prev { left: 10px !important; };
+
+.photos,
+.photo-message {
+  padding: 10px;
+}
+
+@import 'responsive';
